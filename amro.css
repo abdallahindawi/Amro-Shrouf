@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Navigation bar*/
+nav{
+padding: 8px;}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    background-color: #e8e8e8;
+    width: fit-content;
+    border-radius: 999px;
+    border: 1px solid #d4d3d3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 18px 10px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+nav ul li a:hover {
+  color: white;
+  background-color: red;
+}
+/*Navigation bar*/
+
+/* About Me Section */
+.about-me {
+  padding: 120px 20px;
+}
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.about-img {
+  order: 2;
+  width: 350px;
+  max-width: 100%;
+}
+.about-section{
+  order: 1;
+}
+.about-text{
+  flex: 1;
+}
+.about-text h2{
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: red;
+}
+.about-text p{
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-left: 30px;
+}
+p{
+  position: relative;
+}
+span{
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+.about-img {
+  animation: float 2.5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.about-img:hover {
+  animation-play-state: paused;
+}
+/* About Me Section */
+
+/* Videos Section */
+.videos h2{
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: red;
+}
+.videos{
+  padding: 120px 20px;
+}
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 750px;
+}
+.video-thumb img{
+  width: 100%;
+  aspect-ratio: 16/9; /* يجعل كل الصور بنفس النسبة */
+  object-fit: cover;
+  border-radius: 10px;
+}
+.video-card{
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+.video-card:nth-child(2) {
+  justify-self: end;
+}
+.video-card:hover{
+ background-color: rgba(0, 0, 0, 0.25);
+ transition: background-color 0.5s ease;
+  border-radius: 10px;
+}
+.video-card h3{
+  font-size: 15px;
+  font-weight: 500;
+}
+/* Videos Section */
+
+/* contact me */
+.contact-me{
+  padding: 50px 20px;
+  background-color: red;
+  position: relative;
+  height: 250px;
+}
+.icons{
+    display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.icon-link{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+}
+.icon-link i{
+  font-size: 25px;
+}
+.icon-link span{
+  color: white;
+  font-size: 16px;
+}
+.facebook{
+  background-color: #3b5998;
+}
+
+.instagram{
+  background-color: #E1306C;
+}
+
+.youtube{
+  background-color:  #e52d27;
+}
+
+.email{
+  background-color: gray; 
+}
+.icon-box{
+  border-radius: 8px;
+}
+.icon-box:hover{
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+/* contact me */
+.made-by {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
+
+.made-by a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column; /* يجعل النص فوق والصورة تحت */
+    gap: 30px;
+  }
+
+  .about-text p {
+    margin-left: 0; /* إزالة المسافة الكبيرة على اليسار */
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .video-card {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .icons {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .icon-link {
+    justify-content: center;
+  }
+}
+
+
+/* إخفاء الـ navbar على الموبايل */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+/* responsive */
